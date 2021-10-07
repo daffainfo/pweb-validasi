@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./assets/validasi.js"></script>
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Form Validasi Vaksinasi</title> 
+</head>
+<body>
+    <div class="container content">
+        <h1 class="text-center pt-5">Form Validasi Vaksinasi</h1>
+        <form autocomplete="off" name="validasiForm" onsubmit="return validateForm()">
+            <div class="form-group mt-5">
+                <label class="font-weight-bold mt-1">Nama Lengkap</label>
+                <input type="text" name="nama" placeholder="Muhammad Daffa" class="form-control" maxlength="50">
+            </div>
+            <div class="form-group">
+                <label class="font-weight-bold mt-1">NRP</label>
+                <input type="number" name="nrp" placeholder="05111940000175" class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="font-weight-bold mt-1">Domisili</label>
+                <input type="text" name="domisili" placeholder="Surabaya" class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="font-weight-bold mt-1">Departemen</label>
+                <select name="fakultas" id="departemen" class="form-control" required>
+                    <option value='0'>Pilih Departemen</option>
+                    <option value='manajemen_bisnis'>Manajemen Bisnis</option>
+                    <option value='desain_produk_industri'>Desain Produk Industri</option>
+                    <option value='manajemen_teknologi'>Manajemen Teknologi</option>
+                    <option value='desain_interior'>Desain Interior</option>
+                    <option value='studi_pembangunan'>Studi Pembangunan</option>
+                    <option value='desain_komunikasi_visual'>Desain Komunikasi Visual</option>
+                    <option value='teknik_industri'>Teknik Industri</option>
+                    <option value='teknik_mesin'>Teknik Mesin</option>
+                    <option value='teknik_kimia'>Teknik Kimia</option>
+                    <option value='teknik_fisika'>Teknik Fisika</option>
+                    <option value='teknik_material_dan_metalurgi'>Teknik Material dan Metalurgi</option>
+                    <option value='teknik_informatika'>Teknik Informatika</option>
+                    <option value='sistem_informasi'>Sistem Informasi</option>
+                    <option value='teknologi_informasi'>Teknologi Informasi</option>
+                    <option value='teknik_elektro'>Teknik Elektro</option>
+                    <option value='teknik_biomedik'>Teknik Biomedik</option>
+                    <option value='teknik_komputer'>Teknik Komputer</option>  
+                    <option value='perancangan_wilayah_kota'>Perancangan Wilayah Kota</option>
+                    <option value='arsitektur'>Arsitektur</option>
+                    <option value='teknik_sipil'>Teknik Sipil</option>
+                    <option value='teknik_lingkungan'>Teknik Lingkungan</option>
+                    <option value='teknik_geomatika'>Teknik Geomatika</option>
+                    <option value='teknik_geofisika'>Teknik Geofisika</option>    
+                    <option value='teknik_perkapalan'>Teknik Perkapalan</option>
+                    <option value='teknik_kelautan'>Teknik Kelautan</option>
+                    <option value='teknik_transportasi_laut'>Teknik Transportasi Laut</option>
+                    <option value='biologi'>Biologi</option>
+                    <option value='aktuaria'>Aktuaria</option>
+                    <option value='matematika'>Matematika</option>
+                    <option value='statistik'>Statistika</option>
+                    <option value='kimia'>Kimia</option>
+                    <option value='fisika'>Fisika</option>
+                </select>
+            </div>
+            <label class="font-weight-bold mt-1">Status Vaksin</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="belum_vaksin" id="belum_vaksin" value="option1" checked>
+                <label class="form-check-label" for="belum_vaksin">Belum Vaksin</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="dosis_1" id="dosis_1" value="option2">
+                <label class="form-check-label" for="dosis_1">Dosis 1</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="dosis_2" id="dosis_2" value="option2">
+                <label class="form-check-label" for="dosis_2">Dosis 2</label>
+            </div>
+            <button type="submit" class="btn btn-primary mt-5">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
